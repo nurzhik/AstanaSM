@@ -14,6 +14,52 @@ jQuery(document).ready(function ($) {
         prevArrow: '<span class="slick-prev slick-nav slick-nav--prev" aria-label="previous"></span>',
         nextArrow: '<span class="slick-next slick-nav slick-nav--next" aria-label="next"></span>'
     });
+
+
+
+     $('.slider_partners').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        speed: 1000,
+        arrows: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+        initialSlide: 0,
+        prevArrow: '<span class="slick-prev our_clients_nav slick-nav--prev" aria-label="previous"></span>',
+        nextArrow: '<span class="slick-next our_clients_nav slick-nav--next" aria-label="next"></span>',
+         responsive: [
+	            {
+	              breakpoint: 1020,
+	              settings: {
+	                slidesToShow: 3,
+	                slidesToScroll: 1,
+	              }
+	             },
+	              {
+	              breakpoint: 810,
+	              settings: {
+	                slidesToShow: 3,    
+	                slidesToScroll: 1,
+	              }
+	             },
+	             {
+	              breakpoint: 610,
+	              settings: {
+	                slidesToShow: 2,    
+	                slidesToScroll: 1
+	              }
+	             },
+	             {
+	              breakpoint: 440,
+	              settings: {
+	                slidesToShow: 1,    
+	                slidesToScroll: 1
+	              }
+	             }
+	        ]
+    });
+
      //menu
        $('.mob_start').click(function(e) {
     var $mob_part = $('.menu');

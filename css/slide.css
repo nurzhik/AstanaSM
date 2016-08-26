@@ -36,7 +36,37 @@
     cursor: pointer;
     cursor: hand;
 }
-
+.slider_partners .slider__item img {
+    width: auto;
+}
+.slider_partners .slider__item.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100px;
+}
+.slick-next.our_clients_nav.slick-nav--next.slick-arrow {
+    width: 8px;
+    height: 26px;
+    background-image: url(../img/right.png);
+    position: absolute;
+    right: -25px;
+}
+.slick-prev.our_clients_nav.slick-nav--prev.slick-arrow {
+    width: 8px;
+    height: 26px;
+    background-image: url(../img/left.png);
+    position: absolute;
+    left: -25px;
+}
+.slider_partners.slick-initialized.slick-slider {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
 .slick-slider .slick-track,
 .slick-slider .slick-list
 {
@@ -154,6 +184,10 @@
     background-color: #167eb3;
     transition: all 0.4s ease-in;
 }
+.slick-next.our_clients_nav.slick-nav--next.slick-arrow:hover,.slick-prev.our_clients_nav.slick-nav--prev.slick-arrow:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
 /**/
 .news-list.slick-initialized.slick-slider {
     width: 93%;
@@ -262,4 +296,13 @@
 .slick-prev-partners:hover,.slick-next-partners:hover {
     cursor: pointer;
     transition: all 0.4s ease-in;
+}
+@media screen and (max-width:1020px){
+
+    .slick-next.our_clients_nav.slick-nav--next.slick-arrow {
+    right: 0;
+}
+.slick-prev.our_clients_nav.slick-nav--prev.slick-arrow {
+    left: 0px;
+}
 }

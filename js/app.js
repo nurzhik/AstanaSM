@@ -14,6 +14,37 @@ jQuery(document).ready(function ($) {
         prevArrow: '<span class="slick-prev slick-nav slick-nav--prev" aria-label="previous"></span>',
         nextArrow: '<span class="slick-next slick-nav slick-nav--next" aria-label="next"></span>'
     });
+     //menu
+       $('.mob_start').click(function(e) {
+    var $mob_part = $('.menu');
+    if ($mob_part.css('display') != 'block') {
+        $mob_part.animate({height: "show"}  ,"1000");
+         $mob_part.addClass('m_menu');}
+    else{
+         $mob_part.animate({height: "hide"},  "1000");
+         $mob_part.removeClass('m_menu');
+    };
+     });
+
+
+      $('.sub_menu_link').on('click', function(){
+        if(($(this)).children('.sub_menu').hasClass('sub_show')){
+        $(this).siblings().children('.sub_menu').removeClass('sub_show');    
+        $(this).siblings().children('.sub_menu').animate({height: "hide"},  "1000");
+            
+        }else{
+            $(this).children('.sub_menu').addClass('sub_show');
+             $(this).children('.sub_menu').animate({height: "show"}  ,"1000")
+            
+        }
+        if($(this).siblings().children('.sub_menu').hasClass('sub_show')){
+            $(this).siblings().children('.sub_menu').removeClass('sub_show');
+              $(this).siblings().children('.sub_menu').animate({height: "hide"},  "1000");
+        }
+    });
+
+
+     //end
 });
 jQuery(document).ready(function() { // Р В·Р В°Р С—РЎС“РЎРѓР С”Р В°Р ВµР С РЎРѓР С”РЎР‚Р С‘Р С—РЎвЂљ Р С—Р С•РЎРѓР В»Р Вµ Р В·Р В°Р С–РЎР‚РЎС“Р В·Р С”Р С‘ Р Р†РЎРѓР ВµРЎвЂ¦ РЎРЊР В»Р ВµР СР ВµР Р…РЎвЂљР С•Р Р†
     /* Р В·Р В°РЎРѓРЎС“Р Р…Р ВµР С РЎРѓРЎР‚Р В°Р В·РЎС“ Р Р†РЎРѓР Вµ РЎРЊР В»Р ВµР СР ВµР Р…РЎвЂљРЎвЂ№ Р Р† Р С—Р ВµРЎР‚Р ВµР СР ВµР Р…Р Р…РЎвЂ№Р Вµ, РЎвЂЎРЎвЂљР С•Р В±РЎвЂ№ РЎРѓР С”РЎР‚Р С‘Р С—РЎвЂљРЎС“ Р Р…Р Вµ Р С—РЎР‚Р С‘РЎвЂ¦Р С•Р Т‘Р С‘Р В»Р С•РЎРѓРЎРЉ Р С‘РЎвЂ¦ Р С”Р В°Р В¶Р Т‘РЎвЂ№Р в„– РЎР‚Р В°Р В· Р С‘РЎРѓР С”Р В°РЎвЂљРЎРЉ Р С—РЎР‚Р С‘ Р С”Р В»Р С‘Р С”Р В°РЎвЂ¦ */
@@ -42,4 +73,24 @@ jQuery(document).ready(function() { // Р В·Р В°Р С—РЎС“РЎРѓР
                  }
              );
      });
+});
+
+
+
+jQuery(document).ready(function() {
+ $('.aside-list__item___head').on('click', function () {
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).siblings('.aside-list__item___container').animate({height: "hide"}, "900");
+		}else{
+			$('.aside-list__item___head').removeClass('active');
+			$('.aside-list__item___head').siblings('.aside-list__item___container').animate({height: "hide"}, "easein");
+			$(this).addClass('active');
+			$(this).siblings('.aside-list__item___container').animate({height: "show"}, "easein");
+			
+	
+		}
+		
+		
+    });
 });
